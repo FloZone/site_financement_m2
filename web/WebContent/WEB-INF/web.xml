@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <filter>
+    <filter-name>AuthenticationFilter</filter-name>
+    <filter-class>filters.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthenticationFilter</filter-name>
+    <url-pattern>/User/Logout</url-pattern>
+    <url-pattern>/User/Show</url-pattern>
+    <url-pattern>/Project/Create</url-pattern>
+    <url-pattern>/Project/Edit</url-pattern>
+  </filter-mapping>
+  
+  
+	 <filter>
+	  <filter-name>AdminFilter</filter-name>
+	  <filter-class>filters.AdminFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	  <filter-name>AdminFilter</filter-name>
+	  <url-pattern>/Administration</url-pattern>
+	  <url-pattern>/Administration/*</url-pattern>
+	</filter-mapping>
+</web-app>
